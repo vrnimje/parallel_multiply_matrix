@@ -1,3 +1,10 @@
+/**
+* @file main.cpp
+* @author Vedant <vedantnimjed@gmail.com>
+* @version 0.0
+*
+*/
+
 #include <hpx/algorithm.hpp>
 #include <hpx/execution.hpp>
 #include <hpx/hpx_main.hpp>
@@ -8,8 +15,17 @@
 #include <random>
 #include <vector>
 
+/** @brief Random number generator
+*/
 std::mt19937 gen;
 
+/** @brief Util for printing matrices
+*
+* @param[in] X Vector consisting of all the elements of the matrix
+* @param[in] name Name of matrix
+* @param[in] r No. of rows in the matrix
+* @param[in] c No. of columns in the matrix
+*/
 void print_matrix(const std::vector<int>& X, const std::string& name, const int& r, const int& c) {
     std::cout << "\nMatrix " << name << std::endl;
     for (int i=0; i<r; i++) {
